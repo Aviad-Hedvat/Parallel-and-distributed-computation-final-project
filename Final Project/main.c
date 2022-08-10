@@ -113,7 +113,7 @@ int main(int argc, char* argv[])
     FILE* wf = NULL; // writing file pointer
     if (rank == 0)
     {
-        if (wf = fopen(OUTPUT_NAME, "w") == 0)
+        if ((wf = fopen(OUTPUT_NAME, "w")) == 0)
         {
             printf("Problem to open writing file\n");
             MPI_Abort(MPI_COMM_WORLD, 0);
